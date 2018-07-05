@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_huise"
+    android:orientation="vertical"
+    tools:context=".activity.ModifyAcyivity">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/modify_ed"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/edittext_white"
+            android:gravity="top"
+            android:hint="点击此处输入修改意见(80字内)"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:maxLength="80"
+            android:lineSpacingExtra="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mod_ll_all"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/textselector_blue">
+                    <LinearLayout
+                        android:id="@+id/mod_ll_yuyin"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/anim_yuyin_sign"/>
+                    <TextView
+                        android:id="@+id/mod_tv_bf"
+                        android:layout_width="85dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/mod_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13sp"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mod_lz"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text=""
+                android:visibility="invisible"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mod_tv"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/textselect_blue2"
+        android:gravity="center"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <com.lcsd.examines.fengtai.manager.AudioRecordButton
+        android:id="@+id/mod_tv_btn"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:background="@drawable/button_false"
+        android:text="@string/long_click_record"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="gone"/>
+</LinearLayout>
